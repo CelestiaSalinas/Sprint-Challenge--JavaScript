@@ -13,14 +13,13 @@ class CuboidMaker {
     this.height = attributes.height;
   }
   volume() {
-    return `${this.length}` * `${this.width}` * `${this.height}`;
+    return this.length * this.width * this.height;
   }
   SFA() {
     return (
-      2 *
-      (`${this.length}` * `${this.width}` +
-        `${this.length}` * `${this.height}` +
-        `${this.width}` * `${this.height}`)
+      2 * this.length * this.width +
+      this.length * this.height +
+      this.width * this.height
     );
   }
 }
@@ -39,15 +38,14 @@ class CubeMaker extends CuboidMaker {
       (this.height = attributes.height);
   }
   volume2() {
-    return `${this.length}` * `${this.width}` * `${this.height}`;
+    return this.length * this.width * this.height;
   }
 
   SFA2() {
     return (
-      2 *
-      (`${this.length}` * `${this.width}` +
-        `${this.length}` * `${this.height}` +
-        `${this.width}` * `${this.height}`)
+      2 * this.length * this.width +
+      this.length * this.height +
+      this.width * this.height
     );
   }
 }
