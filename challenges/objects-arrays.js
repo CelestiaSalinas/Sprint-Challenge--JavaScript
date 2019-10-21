@@ -127,10 +127,10 @@ Once you have the new array created, sort the universities alphabetically and lo
 const universities = [];
 
 graduates.forEach(grad => {
-  universities.push(`${grad.university}`);
+  universities.push(grad.university);
 });
 
-console.log(universities);
+console.log(universities.sort());
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
@@ -146,7 +146,7 @@ graduates.forEach(grad => {
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = graduates.map(grad => `${grad.university}` === "Uni");
+const unisWithUni = graduates.filter(grad => grad.university.includes("Uni"));
 
 console.log(unisWithUni);
 
